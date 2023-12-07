@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>STUDENT RECORDS</title>
+</head>
+<center>
+<body>
+<h2>STUDENT INFORMATION</h2>
+<table border="2">
+<thead>
+    <th>Student No</th>
+    <th>Student Name</th>
+    <th>Student Age</th>
+    <th>Student Department</th>
+    <th>Actions</th>
+</thead>
+{%for i in s%}
+<tr>
+    <td>{{i.Sno}}</td>
+    <td>{{i.Name}}</td>
+    <td>{{i.Age}}</td>
+    <td>{{i.Dep}}</td>
+    <td><a href="/update/{{i.id}}">Update</a> | <a href="/delete/{{i.id}}">Delete</a></td>
+</tr>
+{%endfor%}
+</table>
+</body>
+</center>
+</html>
